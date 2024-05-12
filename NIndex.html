@@ -102,7 +102,7 @@
                 'happy': ['enjoyable childhood', 'perfectly normal happiness', 'happiness from madness', 'dumb idiot']
             };
 
-            var hairColors = ['brown', 'blonde', 'black', 'dark brown', 'dirty blonde', 'ginger', 'dyed', 'white', 'strawberry blonde'];
+            var hairColors = generateHaircolor();
 
             var selectedCategory = categories[Math.floor(Math.random() * categories.length)];
             var age = generateAge();
@@ -146,6 +146,11 @@
                 ages.push(i.toString());
             }
             return ages[Math.floor(Math.random() * ages.length)];
+        }
+
+        function generateHairColor() {
+            var haircolors = ['brown', 'blonde', 'black', 'dark brown', 'dirty blonde', 'ginger', 'dyed', 'white', 'strawberry blonde'];
+            return haircolors[Math.floor(Math.random() * genders.length)];
         }
 
         function generateGender() {
